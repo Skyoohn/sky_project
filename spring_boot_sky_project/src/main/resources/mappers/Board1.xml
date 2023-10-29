@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.global.ex.mapper.IBDao">
+   <select id="listDao" resultType="edu.global.ex.vo.BoardVO">
+      <![CDATA[
+         select bId, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, bIndent from mvc_board order by bGroup desc, bStep asc
+      ]]>
+   </select>
+   
+
+   
+</mapper>
