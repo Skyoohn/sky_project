@@ -5,7 +5,7 @@ nkanji varchar2(100) not null,  -- ÇÑÀÚ title
 nruby varchar2(500),  -- ¿ä¹Ì°¡³ª
 nsetsumei varchar2(500),  -- ¼³¸í
 ndifficulty number(5) default 0, -- ³­ÀÌµµ
-ndate default sysdate, -- Ãß°¡ÀÏ
+ndate date default sysdate, -- Ãß°¡ÀÏ
 nselector number(1) not null -- Á¾·ù
 );
 
@@ -15,7 +15,7 @@ commit;
 
 rollback;
 
-INSERT INTO nbp_board VALUES('«Õ«ÃáÈ','ªÕªÃª½','«Õ«ÃáÈªÏ¡¢ê«í­Ûã?9ªÎêªáÈªÇª¢ªë¡£êªáÈÑÀ?ªÏF¡£ê«í­ÕáªÏ18.9984¡£«Ï«í«²«óªÎªÒªÈªÄ¡£ ªŞª¿¡¢ÔÒêªáÈªÎ??ªÇª¢ªë«Õ«ÃáÈİÂí­ªâ¡¢ìéÚõîÜªË«Õ«ÃáÈªÈû¼ªĞªìªë¡£');
+INSERT INTO nbp_board VALUES('«Õ«ÃáÈ','ªÕªÃª½','«Õ«ÃáÈªÏ¡¢ê«í­Ûã?9ªÎêªáÈªÇª¢ªë¡£êªáÈÑÀ?ªÏF¡£ê«í­ÕáªÏ18.9984¡£«Ï«í«²«óªÎªÒªÈªÄ¡£ ªŞª¿¡¢ÔÒêªáÈªÎ??ªÇª¢ªë«Õ«ÃáÈİÂí­ªâ¡¢ìéÚõîÜªË«Õ«ÃáÈªÈû¼ªĞªìªë¡£', '1', '11/12/30', '1');
 
 CREATE SEQUENCE nbp_board_seq
 START WITH 1

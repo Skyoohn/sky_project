@@ -82,7 +82,6 @@
 
 	
 	<section id="slider"><!--slider-->
-
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -91,23 +90,13 @@
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
 							<li data-target="#slider-carousel" data-slide-to="1"></li>
 							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
-						
-<!-- <style>
-.carousel-indicators li {
-  background-color: gray;
-}
+						</ol>		
 
-.carousel-indicators .active {
-  background-color: skyblue;
-}
-</style>
- -->
 						<div class="carousel-inner">
 							<div class="item active">
 								<c:forEach var="boardList" items="${boardList}">
 								<div class="col-sm-6">
-									<h1><span style="color: skyblue;">Most </span>Viewed Words</h1>
+									<h1><span>Most </span>Viewed Words</h1>
 									<h2>${boardList.nkanji}</h2>
 									<p>${boardList.nruby}</p>
 									<button type="button" class="btn btn-default get" style="background-color: skyblue;">View definitions</button>
@@ -119,7 +108,7 @@
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span style="color: skyblue;">Most </span>saved words</h1>
+									<h1><span>Most </span>saved words</h1>
 									<h2>侍</h2>
 									<p>さむらい</p>
 									<button type="button" class="btn btn-default get" style="background-color: skyblue;">View definitions</button>
@@ -131,7 +120,7 @@
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span style="color: skyblue;">Most </span>difficult words</h1>
+									<h1><span>Most </span>difficult words</h1>
 									<h2>侍</h2>
 									<p>さむらい</p>
 									<button type="button" class="btn btn-default get" style="background-color: skyblue;">View definitions</button>
@@ -140,26 +129,13 @@
 									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
-							
 						</div>
-						
-
-						
-<!-- <style>
-  a.left.control-carousel:hover {
-    color: skyblue;
-  }
-  a.right.control-carousel:hover {
-    color: skyblue;
-  }
-</style>
 <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
   <i class="fa fa-angle-left"></i>
 </a>
 <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
   <i class="fa fa-angle-right"></i>
-</a> -->
-
+</a> 
 
 					</div>
 					

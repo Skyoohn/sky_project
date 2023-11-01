@@ -17,4 +17,7 @@ public class TangoVO {
 	   private String nkanji;
 	   private String nruby;
 	   private String nsetsumei;
+	   private int ndifficulty;
+	   private Timestamp ndate;
+	   private int nselector;
 }

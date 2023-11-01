@@ -10,6 +10,12 @@
       select * from nbp_board order by nkanji desc, nruby asc
    ]]>    
     </select>
+    <select id="read" resultType="edu.global.ex.vo.TangoVO">
+    <![CDATA[
+    select * from nbp_board where nkanji = #{nkanji}
+    ]]>
+    </select>
+    
   
   
   </mapper>

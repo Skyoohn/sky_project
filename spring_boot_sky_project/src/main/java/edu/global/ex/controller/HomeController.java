@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import edu.global.ex.service.BoardService;
 import edu.global.ex.service.TangoService;
+import edu.global.ex.vo.BoardVO;
+import edu.global.ex.vo.TangoVO;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -22,6 +24,17 @@ public class HomeController {
 		
 		return "home";
 	}
+	
+	@GetMapping("/content_view")
+	public String content_view(TangoVO tangoVO, Model model) {
+		log.info("content_view()..");
+		
+		char nkanji = tangoVO.getNkanji();
+		model.addAttribute("content_view",tangoService.read(nkanji));
+		
+		return "/board/content_view";
+	}
+	
 	@GetMapping("/user/userHome")
 	public void userHome() {
 		log.info("userhome() ..");
