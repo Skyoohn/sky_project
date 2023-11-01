@@ -3,8 +3,17 @@ select * from nbp_board;
 create table nbp_board (
 nkanji varchar2(100) not null,  -- ÇÑÀÚ title
 nruby varchar2(500),  -- ¿ä¹Ì°¡³ª
-nsetsumei varchar2(500)  -- ¼³¸í
+nsetsumei varchar2(500),  -- ¼³¸í
+ndifficulty number(5) default 0, -- ³­ÀÌµµ
+ndate default sysdate, -- Ãß°¡ÀÏ
+nselector number(1) not null -- Á¾·ù
 );
+
+drop table nbp_board;
+
+commit;
+
+rollback;
 
 INSERT INTO nbp_board VALUES('«Õ«ÃáÈ','ªÕªÃª½','«Õ«ÃáÈªÏ¡¢ê«í­Ûã?9ªÎêªáÈªÇª¢ªë¡£êªáÈÑÀ?ªÏF¡£ê«í­ÕáªÏ18.9984¡£«Ï«í«²«óªÎªÒªÈªÄ¡£ ªŞª¿¡¢ÔÒêªáÈªÎ??ªÇª¢ªë«Õ«ÃáÈİÂí­ªâ¡¢ìéÚõîÜªË«Õ«ÃáÈªÈû¼ªĞªìªë¡£');
 
