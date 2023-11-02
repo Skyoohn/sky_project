@@ -99,7 +99,7 @@
 									<h1><span>Most </span>Viewed Words</h1>
 									<h2>${boardList.nkanji}</h2>
 									<p>${boardList.nruby}</p>
-									<button type="button" class="btn btn-default get" style="background-color: skyblue;">View definitions</button>
+									<a href="/content_view"><button type="button" class="btn btn-default get" style="background-color: skyblue;">View definitions</button></a>
 								</div>
 								</c:forEach>
 								<div class="col-sm-6">

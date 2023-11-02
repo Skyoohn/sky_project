@@ -11,7 +11,7 @@
 <body>
   <table width="700" cellpadding="0" cellspacing="0" border="1">
       <form id="updateForm" action="modify" method="post">
-         <input id="input_bid" type="hidden" name="bid" value="${content_view.bid}">
+         <input id="input_bid" type="hidden" name="nkanji" value="${content_view.nkanji}">
          <tr>
             <td> 단어 </td>
             <td> ${content_view.nkanji} </td>

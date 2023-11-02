@@ -29,10 +29,10 @@ public class HomeController {
 	public String content_view(TangoVO tangoVO, Model model) {
 		log.info("content_view()..");
 		
-		char nkanji = tangoVO.getNkanji();
+		String nkanji = tangoVO.getNkanji();
 		model.addAttribute("content_view",tangoService.read(nkanji));
 		
-		return "/board/content_view";
+		return "/content_view";
 	}
 	
 	@GetMapping("/user/userHome")

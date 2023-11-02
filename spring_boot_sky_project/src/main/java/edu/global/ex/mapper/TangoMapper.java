@@ -10,7 +10,7 @@ import edu.global.ex.vo.TangoVO;
 public interface TangoMapper {		
 	
 	public List<TangoVO> getList();
-	TangoVO read(char nkanji);
+	TangoVO read(String nkanji);
 	int update(TangoVO tango);
 	int delete(TangoVO tango); //글삭제
 	public void insert(TangoVO tango);

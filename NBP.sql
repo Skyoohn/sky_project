@@ -1,6 +1,7 @@
 select * from nbp_board;
 
 create table nbp_board (
+nid number(6) primary key,   -- 게시물 식별자
 nkanji varchar2(100) not null,  -- 한자 title
 nruby varchar2(500),  -- 요미가나
 nsetsumei varchar2(500),  -- 설명

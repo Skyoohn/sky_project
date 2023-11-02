@@ -28,7 +28,7 @@ public class TangoServiceImpl implements TangoService{
 	}
 
 	@Override
-	public TangoVO read(char nkanji) {
+	public TangoVO read(String nkanji) {
 		log.info("read()..");
 		
 		return tangoMapper.read(nkanji);
