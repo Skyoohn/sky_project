@@ -14,6 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class TangoVO {
+	   private int nkid;
 	   private String nkanji;
 	   private String nruby;
 	   private String nsetsumei;

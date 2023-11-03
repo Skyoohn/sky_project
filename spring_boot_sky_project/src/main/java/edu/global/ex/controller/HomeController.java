@@ -29,8 +29,8 @@ public class HomeController {
 	public String content_view(TangoVO tangoVO, Model model) {
 		log.info("content_view()..");
 		
-		String nkanji = tangoVO.getNkanji();
-		model.addAttribute("content_view",tangoService.read(nkanji));
+		int nkid = tangoVO.getNkid();
+		model.addAttribute("content_view",tangoService.read(nkid));
 		
 		return "/content_view";
 	}

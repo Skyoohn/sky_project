@@ -10,9 +10,9 @@
       select * from nbp_board order by nkanji desc, nruby asc
    ]]>    
     </select>
-    <select id="read" resultType="edu.global.ex.vo.TangoVO">
+    <select id="read" resultType="TangoVO">
     <![CDATA[
-    select * from nbp_board where nkanji = #{nkanji}
+    select * from nbp_board where nkid = #{nkid}
     ]]>
     </select>
     

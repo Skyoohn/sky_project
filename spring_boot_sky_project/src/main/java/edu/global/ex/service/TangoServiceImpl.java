@@ -28,10 +28,10 @@ public class TangoServiceImpl implements TangoService{
 	}
 
 	@Override
-	public TangoVO read(String nkanji) {
+	public TangoVO read(int nkid) {
 		log.info("read()..");
 		
-		return tangoMapper.read(nkanji);
+		return tangoMapper.read(nkid);
 	}
 
 	@Override
