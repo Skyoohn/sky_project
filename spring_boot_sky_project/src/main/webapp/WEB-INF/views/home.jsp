@@ -265,13 +265,13 @@
 		<div class="footer-top">
 			<div class="container text-center">
 				<div class="row">
-				
-															<div class="col-sm-3">
+	
+						<div class="col-sm-3">
 						<div class="address">
 							<img src="images/home/map.png" alt="" />
-    <div class="text-center">
-      <p>JP, somewhere, tokyo, japan</p>
-    </div>
+					    <div class="text-center">
+					      <p>JP, somewhere, tokyo, japan</p>
+					    </div>
 						</div>
 					</div>
 				
@@ -286,10 +286,10 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
+										<img src="images/home/apple.jpg" alt="" />
 									</div>
 									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
+										<i class="fa fa-apple"></i>
 									</div>
 								</a>
 								<p>Circle of Hands</p>
@@ -304,7 +304,7 @@
 										<img src="images/home/iframe2.png" alt="" />
 									</div>
 									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
+										<i class="fa fa-android"></i>
 									</div>
 								</a>
 								<p>Circle of Hands</p>
@@ -319,7 +319,7 @@
 										<img src="images/home/iframe3.png" alt="" />
 									</div>
 									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
+										<i class="fa fa-windows"></i>
 									</div>
 								</a>
 								<p>Circle of Hands</p>
@@ -334,7 +334,7 @@
 										<img src="images/home/iframe4.png" alt="" />
 									</div>
 									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
+										<i class="fa fa-linux"></i>
 									</div>
 								</a>
 								<p>Circle of Hands</p>
