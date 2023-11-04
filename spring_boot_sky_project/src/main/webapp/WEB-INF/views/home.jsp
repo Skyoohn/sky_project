@@ -243,12 +243,12 @@
           <div class="productinfo text-center">
             <h2 style="color: skyblue;">${boardList.nkanji}</h2>
             <p>${boardList.nruby}</p>
-            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Save Words</a>
+            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square-o"></i>Save <br>Words</a>
           </div>
         </div>
         <div class="choose">
           <ul class="nav nav-pills nav-justified">
-            <li><a href="#"><i class="fa fa-plus-square"></i>Selecting the highest difficulty level</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>Selecting the highest difficulty level</a></li>
           </ul>
         </div>
       </div>
