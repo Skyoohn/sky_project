@@ -10,12 +10,16 @@
       select * from nbp_board order by nkanji desc, nruby asc
    ]]>    
     </select>
+    
     <select id="read" resultType="TangoVO">
     <![CDATA[
     select * from nbp_board where nkid = #{nkid}
     ]]>
     </select>
     
-  
-  
+    <select id="levelup" resultType="TangoVO">
+    <![CDATA[
+	  update nbp_board set ndifficulty = ndifficulty + 1;
+  	]]>
+  	</select>
   </mapper>

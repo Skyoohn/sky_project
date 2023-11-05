@@ -38,7 +38,7 @@ public class TangoServiceImpl implements TangoService{
 	public int modify(TangoVO tango) {
 		log.info("modify()..");
 		
-		return tangoMapper.update(tango);
+		return tangoMapper.levelup(tango);
 	}
 
 	@Override
@@ -65,5 +65,11 @@ public class TangoServiceImpl implements TangoService{
 	   public int getTotal() {      
 	      return tangoMapper.getTotalCount();
 	   }
+
+
+	@Override
+	public int levelup() {
+		return tangoMapper.levelup(null);
+	}
 	
 }

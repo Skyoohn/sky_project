@@ -18,6 +18,8 @@ rollback;
 
 INSERT INTO nbp_board VALUES('1','л╒л├с╚','к╒к├к╜','л╒л├с╚к╧бвълэн█у?9к╬ъкс╚к╟квкыбгъкс╚╤└?к╧Fбгълэн╒ск╧18.9984бгл╧лэл▓лєк╬к╥к╚к─бг к▐к┐бв╘╥ъкс╚к╬??к╟квкыл╒л├с╚▌┬энктбвьщ┌їю▄к╦л╒л├с╚к╚√╝к╨кькыбг', '1', '11/12/30', '1');
 
+update nbp_board set ndifficulty = ndifficulty + 1;
+
 CREATE SEQUENCE nbp_board_seq
 START WITH 1
 INCREMENT BY 1;

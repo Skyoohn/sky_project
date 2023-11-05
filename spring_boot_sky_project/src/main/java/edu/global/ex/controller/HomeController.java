@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import edu.global.ex.service.BoardService;
 import edu.global.ex.service.TangoService;
@@ -34,6 +35,12 @@ public class HomeController {
 		
 		return "/content_view";
 	}
+	
+    @PostMapping("/levelup")
+    public String levelup() {
+        tangoService.levelup();
+        return "redirect:/";
+    }
 	
 	@GetMapping("/user/userHome")
 	public void userHome() {
