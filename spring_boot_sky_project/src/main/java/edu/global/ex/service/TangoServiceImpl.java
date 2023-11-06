@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import edu.global.ex.mapper.TangoMapper;
-import edu.global.ex.page.Criteria;
-import edu.global.ex.vo.BoardVO;
 import edu.global.ex.vo.TangoVO;
 import lombok.extern.slf4j.Slf4j;
 
@@ -38,7 +36,7 @@ public class TangoServiceImpl implements TangoService{
 	public int modify(TangoVO tango) {
 		log.info("modify()..");
 		
-		return tangoMapper.levelup(tango);
+		return 0;/*tangoMapper.levelup();*/
 	}
 
 	@Override
@@ -68,8 +66,9 @@ public class TangoServiceImpl implements TangoService{
 
 
 	@Override
-	public int levelup() {
-		return tangoMapper.levelup(null);
+	public int levelup(int nkid) {
+		
+		return tangoMapper.levelup();
 	}
 	
 }
