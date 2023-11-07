@@ -34,7 +34,7 @@ public class HomeController {
 	}
 	
     @GetMapping("/levelup")
-    public String levelup() {
+    public String levelup(TangoVO tangoVO) {
         tangoService.levelup();
         return "redirect:/";
     }
