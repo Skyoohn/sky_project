@@ -292,8 +292,8 @@
 										<i class="fa fa-apple"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>for apple application</p>
+								<h2>25 DEC 2054</h2>
 							</div>
 						</div>
 						
@@ -301,14 +301,14 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe2.png" alt="" />
+										<img src="images/home/android.jpg" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-android"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>for android application</p>
+								<h2>25 DEC 2054</h2>
 							</div>
 						</div>
 						
@@ -316,14 +316,14 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe3.png" alt="" />
+										<img src="images/home/windows.jpg" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-windows"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>for windows application</p>
+								<h2>25 DEC 2054</h2>
 							</div>
 						</div>
 						
@@ -331,14 +331,14 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe4.png" alt="" />
+										<img src="images/home/linux.jpg" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-linux"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>for linux application</p>
+								<h2>25 DEC 2054</h2>
 							</div>
 						</div>
 					</div>
