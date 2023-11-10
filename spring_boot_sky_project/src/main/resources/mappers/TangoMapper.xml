@@ -19,7 +19,7 @@
     
     <select id="levelup" resultType="TangoVO">
     <![CDATA[
-	  update nbp_board set ndifficulty = ndifficulty + 1;
+	  update nbp_board set ndifficulty = ndifficulty + 1
   	]]>
   	</select>
   </mapper>

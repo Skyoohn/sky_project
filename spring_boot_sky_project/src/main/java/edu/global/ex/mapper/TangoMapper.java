@@ -11,7 +11,7 @@ public interface TangoMapper {
 	
 	public List<TangoVO> getList();
 	TangoVO read(int nkid);
-	int levelup();
+	public int levelup(int ndifficulty);
 	int delete(TangoVO tango); //글삭제
 	public void insert(TangoVO tango);
 	public void updateShape(TangoVO tango);
