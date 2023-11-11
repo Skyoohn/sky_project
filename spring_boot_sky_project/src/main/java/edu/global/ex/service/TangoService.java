@@ -7,7 +7,7 @@ import edu.global.ex.vo.TangoVO;
 public interface TangoService {
 	List<TangoVO> getList(); //리스트 메소드
 	TangoVO read(int nkid); //글보기 메소드
-	int levelup(int ndifficulty); // 난이도
+	void levelup(int nkid); // 난이도
 	int modify(TangoVO tango); //글수정
 	int remove(TangoVO tangoVO); //글삭제
 	void register(TangoVO tangoVO); //글추가

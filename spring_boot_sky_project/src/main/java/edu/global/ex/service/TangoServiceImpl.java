@@ -66,9 +66,8 @@ public class TangoServiceImpl implements TangoService{
 
 
 	@Override
-	public int levelup(int ndifficulty) {
-		
-		return tangoMapper.levelup(ndifficulty);
+	public void levelup(int nkid) {
+		tangoMapper.levelup(nkid);
 	}
 	
 }

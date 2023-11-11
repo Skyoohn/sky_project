@@ -248,7 +248,7 @@
         </div>
         <div class="choose">
           <ul class="nav nav-pills nav-justified">
-            <li><a href="/levelup"><i class="fa fa-hand-o-right"></i>Selecting the highest difficulty level</a></li>
+            <li><a href="/levelup?nkid=1"><i class="fa fa-hand-o-right"></i>Selecting the highest difficulty level</a></li>
           </ul>
         </div>
       </div>
