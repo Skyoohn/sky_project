@@ -243,12 +243,12 @@
           <div class="productinfo text-center">
             <h2 style="color: skyblue;">${boardList.nkanji}</h2>
             <p>${boardList.nruby}</p>
-            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square-o"></i>Save <br>Words</a>
+            <button type="submit" class="btn btn-default add-to-cart" id="btnn"><i class="fa fa-plus-square-o"></i>Save <br>Words</button>
           </div>
         </div>
         <div class="choose">
           <ul class="nav nav-pills nav-justified">
-            <li><a href="/levelup?nkid=1"><i class="fa fa-hand-o-right"></i>Selecting the highest difficulty level</a></li>
+            <li><a href="/levelup?nkid=${boardList.nkid}"><i class="fa fa-hand-o-right"></i>Selecting the highest difficulty level</a></li>
           </ul>
         </div>
       </div>
@@ -359,7 +359,52 @@
 		
 	</footer><!--/Footer-->
 	
+	
+		<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">MUZU</h5>
+      </div>
+      <div class="modal-body">
+       	<strong>단어가 저장되었습니다.</strong>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal" id="continueShopping">계속하기</button>
+        <button type="button" class="btn btn-dark" id="cartConfirmation">단어장 확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
 
+<script>
+$("#btnn").click(function(event) {
+    var principal = <%= request.getUserPrincipal() != null %>;
+    
+    if (!principal) {
+        
+        alert("로그인이 필요합니다.");
+        event.preventDefault();
+    } 
+        // 모달 창을 띄웁니다.
+        $('#cartModal').modal('show');
+        event.preventDefault();
+});
+
+//장바구니 확인 버튼 클릭 시 form을 제출하도록 설정
+$("#cartConfirmation").click(function() {
+	$("form[name='cartgogo']").submit();
+});
+
+$("#continueShopping").click(function() {
+	$("form[name='cartgogo']").submit();
+    setTimeout(function() {
+        window.location.href = "/shop/*";
+    }, 10); 
+});
+
+</script>
   
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
