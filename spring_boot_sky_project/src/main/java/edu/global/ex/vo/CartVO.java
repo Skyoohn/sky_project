@@ -23,5 +23,10 @@ ENABLED           CHAR(1)
 @NoArgsConstructor
 @ToString
 public class CartVO {
-	private String product;
+	private String username; // 유저 id
+	private String product_img; // 이미지
+	private String product_name; // 이름
+	private int product_code;
+	private String options;
+	private int number_of_order;
 }

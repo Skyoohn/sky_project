@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import edu.global.ex.mapper.UserMapper;
+import edu.global.ex.mapper.NbpUserMapper;
 import edu.global.ex.vo.CartVO;
 import edu.global.ex.vo.CustomUserDetailsVO;
 import edu.global.ex.vo.UserVO;
@@ -31,21 +31,20 @@ loadUserByUsername()에서 하는 일
 public class CustomUserDetailsService implements UserDetailsService {
 	
 	@Autowired
-	private UserMapper userMapper;
+	private NbpUserMapper nbpUserMapper;
 	
 	@Override	
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 	
 		log.warn("Load User By UserVO number: " + username);
 		
-		UserVO user = userMapper.getUser(username);
+		UserVO user = nbpUserMapper.getUser(username);
 		CartVO cart = new CartVO();
-		cart.setProduct("콜라");
+		/* cart.setProduct("콜라"); */
 		
 		log.warn("queried by UserVO mapper: " + user);
 		
 		return user == null ? null : new CustomUserDetailsVO(user);
 	}
-	
 	
 }

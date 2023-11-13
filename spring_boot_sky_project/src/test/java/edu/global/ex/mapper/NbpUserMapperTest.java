@@ -14,10 +14,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest
 @Slf4j
-class UserMapperTest {
+class NbpUserMapperTest {
 
 	@Autowired
-	private UserMapper userMapper;
+	private NbpUserMapper nbpUserMapper;
 	
 	
 	/*
@@ -36,7 +36,7 @@ class UserMapperTest {
 	
 	@Test
 	void testGetList() {
-		UserVO user = userMapper.getUser("admin");
+		UserVO user = nbpUserMapper.getUser("admin");
 		System.out.println(user);
 	}
 	
@@ -44,7 +44,7 @@ class UserMapperTest {
 	 user.setUsername("user2"); user.setPassword(passwordEncoder.encode("user2"));
 	 user.setEnabled(1);
 	
-	 userMapper.insertUser(user); userMapper.insertAuthorities(user); }
+	 nbpUserMapper.insertUser(user); nbpUserMapper.insertAuthorities(user); }
 
 	   
 	   //암호 체크 방법
