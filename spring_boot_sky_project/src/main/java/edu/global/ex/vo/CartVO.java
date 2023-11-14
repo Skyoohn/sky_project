@@ -27,6 +27,6 @@ public class CartVO {
 	private String product_img; // 이미지
 	private String product_name; // 이름
 	private int product_code;
-	private String options;
-	private int number_of_order;
+	private int options;
+	private String number_of_order;
 }

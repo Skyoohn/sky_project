@@ -51,23 +51,9 @@ public class CartController {
         }
     }
     
-    @PostMapping("/updateStockQuantity")
-    public ResponseEntity<String> updateStockQuantity(
-        @RequestParam("product_name") String product_name,
-        @RequestParam("stock_quantity") int stock_quantity,
-        @RequestParam("options") String options
-        ) {
-        try {
-            // 해당 상품의 재고 수량을 업데이트
-            cartService.updateStockQuantity(product_name, stock_quantity, options);
-            return new ResponseEntity<>("수량 업데이트 성공", HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>("수량 업데이트 실패: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-    
+
     @PostMapping("/insertcart")
-	public String insertCart(Principal principal,UserVO userVO,CartVO cartVO, @RequestParam("options") String options, @RequestParam("selectedQuantity") int selectedQuantity) {
+	public String insertCart(Principal principal,UserVO userVO,CartVO cartVO, @RequestParam("options") int options) {
     	cartVO.setUsername(principal.getName());
     	cartVO.setOptions(options);
     

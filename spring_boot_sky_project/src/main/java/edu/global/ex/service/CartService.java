@@ -13,8 +13,6 @@ public interface CartService {
 	public List<CartVO> listCart(String username);
 	
 	public int delete(int product_code, String options); 
-
-	void updateStockQuantity(String product_name, int stock_quantity, String options);
 	
 	void intoCart(String username, TangoVO tangoVO);
 

@@ -38,22 +38,14 @@ public class CartServiceImpl implements CartService {
     }
     
     @Override
-    public void updateStockQuantity(String product_name, int stock_quantity, String options) {
-    	cartMapper.updateStockQuantity(product_name, stock_quantity, options);
-        
-        
-    }
-
-    @Override
     public void intoCart(String username, TangoVO tangoVO) {
         CartVO cart = new CartVO();
         cart.setUsername(username);
-        cart.setProduct_code(tangoVO.getProductCode());
-        cart.setProduct_img(tangoVO.getImg());
-        cart.setProduct_name(tangoVO.getProductName());
-        cart.setPrice(tangoVO.getPrice());
-        cart.setOptions(tangoVO.getOptions());
-        cart.setStock_quantity(tangoVO.getStock());
+        cart.setProduct_code(tangoVO.getNkid());
+        cart.setProduct_img(tangoVO.getNkanji());
+        cart.setProduct_name(tangoVO.getNruby());
+        cart.setNumber_of_order(tangoVO.getNsetsumei());
+        cart.setOptions(tangoVO.getNselector());
         cartMapper.insert(cart);
         log.info("intoCart...");
     }   
