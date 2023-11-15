@@ -1,4 +1,4 @@
-ㅈ<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- header 시작 -->
@@ -6,7 +6,7 @@
 
 <section id="pay" class="container wrap">
 	
-	<div id="sub-bnr"><h5>Cart</h5></div>
+	<div id="sub-bnr"><h5>日本語単語</h5></div>
 	
 	
 	<div class="row mt-1 justify-content-between hello">

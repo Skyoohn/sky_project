@@ -42,9 +42,21 @@ create table nbp_users(
    username varchar2(50) not null primary key,
    password varchar2(100) not null,
    enabled char(1) DEFAULT '1',
-    cname VARCHAR2(50) NOT NULL,        -- 회원 이름
-    cgrade NUMBER(1)                   -- 회원 등급
+    nname VARCHAR2(50) NOT NULL,        -- 회원 이름
+    ngrade NUMBER(1)                   -- 회원 등급
 );
+
+drop table nbp_users;
+drop table nbp_authorities;
+
+commit;
+
+select * from nbp_users;
+select * from nbp_authorities;
+
+insert into nbp_users (username,password,nname,ngrade) values('a@a.a.a','password','aa','1');
+
+insert into nbp_authorities (username,AUTHORITY) values('a@a.a.a','ROLE_ADMIN');
 
 create table nbp_authorities (
    username varchar2(50) not null,
