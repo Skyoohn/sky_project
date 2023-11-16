@@ -18,10 +18,10 @@
 			      <input type="hidden" name="cmd" value="order">  
 				      <div class="form-check col-1"><input class="form-check-input mt-1" type="checkbox" id="checkAll" onclick="toggleCheckAll()"></div>
 			      </th>     
-			      <th scope="col" class="col-6"><div class="mx-2"><strong>상품명</strong></div></th>
-			      <th scope="col" class="col-2"><div class="mx-2"><strong>수량</strong></div></th>
-			      <th scope="col" class="col-1"><strong>판매가</strong></th>
-			      <th scope="col" class="col-1"><div class="mx-1"><strong>구매금액</strong></div></th>
+			      <th scope="col" class="col-6"><div class="mx-2"><strong>단어</strong></div></th>
+			      <th scope="col" class="col-2"><div class="mx-2"><strong>뜻</strong></div></th>
+			      <th scope="col" class="col-1"><strong>yomigana</strong></th>
+			      <th scope="col" class="col-1"><div class="mx-1"><strong>난이도</strong></div></th>
 			      <th scope="col" class="col-1"><strong>선택</strong></th>
 			    </tr>
 			  </thead>
@@ -56,39 +56,7 @@
 			    </tbody>
 			    </table>
 	    
-	    <div class="paycost row text-center align-middle mx-1">
-	    <div class="col-3">
-	    	<div class="paymg">총 상품금액</div>
-	    	<div class="paytext" id="totalPrice"></div>
-	    </div>
-	    <div class="col-2">
-			<i class="fa-solid fa-circle-plus mt-4"></i>
-		</div>
-	    <div class="col-2">
-			<div class="paymg">배송비</div>
-	    	<div>0</div>
-		</div>
-	    <div class="col-2">
-			<i class="fa-solid fa-circle-right mt-4"></i>
-		</div>
-	    <div class="col-3">
-			<div class="paymg"><strong>결제 예정 금액</strong></div>
-	    	<div class="paytext" id="totalPrice"></div>
-		</div>
-	    </div>
-</div>
-<div class="col-4 right paycontrol">
-		<div class="pay-box mx-4">
-		<div class="rightareaa">
-			<div class="costlinee" id="costline1">총 상품금액<span class="paytext float-end" id="totalPrice"></span></div>			
-			<div class="costtextt">배송비<span class="float-end">0</span></div>
-			<div class="linee"></div>
-			<div class="costlinee" id="sum_p_price"><strong>결제예정금액<span class="paytext float-end" id="totalPrice"></span></strong></div>
-		</div>
-		
-		<div class="px-1"><button type="button" class="btn btn-sm btn-outline-dark" id="btttn" class="wholeorder" onclick="location.href='/pay/'">전체상품주문</button></div>
-	    <!-- <div class="px-1"><button type="button" class="btn btn-sm btn-outline-dark" id="btttn" class="selectorder">선택상품주문</button></div> -->
-		</div>		
+
 </div>
 </div>
 
