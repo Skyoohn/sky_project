@@ -20,7 +20,7 @@
 			      </th>     
 			      <th scope="col" class="col-6"><div class="mx-2"><strong>단어</strong></div></th>
 			      <th scope="col" class="col-2"><div class="mx-2"><strong>뜻</strong></div></th>
-			      <th scope="col" class="col-1"><strong>yomigana</strong></th>
+			      <th scope="col" class="col-1"><strong>yomikana</strong></th>
 			      <th scope="col" class="col-1"><div class="mx-1"><strong>난이도</strong></div></th>
 			      <th scope="col" class="col-1"><strong>선택</strong></th>
 			    </tr>
