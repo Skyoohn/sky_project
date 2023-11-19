@@ -46,7 +46,7 @@
 	        <h1 class="logo me-2"><a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">日本語単語</a></h1>
 	
 	        <ul class="nav col-12 col-lg-auto me-lg-auto mt-1 justify-content-center mb-md-0 ms-10">
-	          <li><a href="/shop/" class="nav-link px-2 text-black">Shop</a></li>
+	          <li><a href="/tango/" class="nav-link px-2 text-black">Tango</a></li>
               <li><a href="/community" class="nav-link px-2 text-black">Community</a></li>
 	        </ul>
 	
