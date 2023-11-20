@@ -10,6 +10,18 @@ ndate date default sysdate, -- 추가일
 nselector number(1) not null -- 종류
 );
 
+  create table nbp_save(
+    number_of_save number,
+    username varchar(50),
+    nkanji varchar2(100),
+    nruby varchar2(500),
+    nsetsumei varchar2(500), 
+    ndifficulty number(5),
+    ndate date default sysdate,
+    nselector number(1),
+    constraint fk_saves foreign key(nkid) references nbp_board(nkid)
+);
+
 drop table nbp_board;
 
 commit;
@@ -70,3 +82,4 @@ select * from nbp_users;
 select * from nbp_authorities;
 
 commit;
+
