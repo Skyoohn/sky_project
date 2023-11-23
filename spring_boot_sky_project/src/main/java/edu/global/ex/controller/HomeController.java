@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import edu.global.ex.service.TangoService;
 import edu.global.ex.vo.TangoVO;
@@ -44,6 +46,26 @@ public class HomeController {
 	public void userHome() {
 		log.info("userhome() ..");
 //		return "home";
+	}
+	
+	@GetMapping("/{boardlist}")
+	public ModelAndView shop(@PathVariable String productCategory, 
+	                         @PathVariable int productCode,
+	                         TangoVO tangoVO, Model model) {
+	    log.info("shop()..");
+
+
+	    log.info(productCategory + productCode);
+	    
+	    // 모델에 데이터 추가
+	    model.addAttribute("spVO", tangoService.read(productCode));
+
+	    System.out.println(tangoService.read(productCode));
+	    
+	    ModelAndView mv = new ModelAndView();
+	    mv.setViewName("/cart");
+
+	    return mv;
 	}
 //	위와 같음
 //	@GetMapping("/user/userHome")

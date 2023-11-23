@@ -25,6 +25,7 @@ select * from nbp_save;
     constraint fk_nbp_save_nbp_board foreign key(nkid) references nbp_board(nkid)
 );
 
+
 drop table nbp_board;
 
 commit;
