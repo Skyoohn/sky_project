@@ -27,7 +27,7 @@
 			  </thead>
 			  <tbody>			  
 				<c:forEach items="${boardlist}" var="listCart" varStatus="loop">
-			    <tr class="product${loop.index} product-row" id="product${loop.index}">
+			    <tr class="product${boardlist.nkanji} product-row" id="product${boardlist.nkanji}">
 			      <th scope="row">
 			      	<div class="form-check col-1"><input class="form-check-input" type="checkbox" onclick="updateTotalPrice()"></div>
 			      </th>
