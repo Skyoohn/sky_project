@@ -1,13 +1,13 @@
 select * from nbp_board;
 
 create table nbp_board (
-nkid number(6) primary key,   -- °Ô½Ã¹° ½Äº°ÀÚ
-nkanji varchar2(100) not null,  -- ÇÑÀÚ title
-nruby varchar2(500),  -- ¿ä¹Ì°¡³ª
-nsetsumei varchar2(500),  -- ¼³¸í
-ndifficulty number(5) default 0, -- ³­ÀÌµµ
-ndate date default sysdate, -- Ãß°¡ÀÏ
-nselector number(1) not null -- Á¾·ù
+nkid number(6) primary key,   -- ï¿½Ô½Ã¹ï¿½ ï¿½Äºï¿½ï¿½ï¿½
+nkanji varchar2(100) not null,  -- ï¿½ï¿½ï¿½ï¿½ title
+nruby varchar2(500),  -- ï¿½ï¿½Ì°ï¿½ï¿½ï¿½
+nsetsumei varchar2(500),  -- ï¿½ï¿½ï¿½ï¿½
+ndifficulty number(5) default 0, -- ï¿½ï¿½ï¿½Ìµï¿½
+ndate date default sysdate, -- ï¿½ß°ï¿½ï¿½ï¿½
+nselector number(1) not null -- ï¿½ï¿½ï¿½ï¿½ í•œê¸€
 );
 
 select * from nbp_save;
@@ -32,7 +32,7 @@ commit;
 
 rollback;
 
-INSERT INTO nbp_board VALUES('1','«Õ«ÃáÈ','ªÕªÃª½','«Õ«ÃáÈªÏ¡¢ê«í­Ûã?9ªÎêªáÈªÇª¢ªë¡£êªáÈÑÀ?ªÏF¡£ê«í­ÕáªÏ18.9984¡£«Ï«í«²«óªÎªÒªÈªÄ¡£ ªÞª¿¡¢ÔÒêªáÈªÎ??ªÇª¢ªë«Õ«ÃáÈÝÂí­ªâ¡¢ìéÚõîÜªË«Õ«ÃáÈªÈû¼ªÐªìªë¡£', '1', '11/12/30', '1');
+INSERT INTO nbp_board VALUES('1','ï¿½Õ«ï¿½ï¿½ï¿½','ï¿½ÕªÃªï¿½','ï¿½Õ«ï¿½ï¿½ÈªÏ¡ï¿½ï¿½ï¿½ï¿½ï¿½?9ï¿½ï¿½ï¿½ï¿½ÈªÇªï¿½ï¿½ë¡£ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½Fï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½18.9984ï¿½ï¿½ï¿½Ï«ï¿½ï¿½ï¿½ÎªÒªÈªÄ¡ï¿½ ï¿½Þªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èªï¿½??ï¿½Çªï¿½ï¿½ï¿½Õ«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡¢ï¿½ï¿½ï¿½ï¿½ï¿½ÜªË«Õ«ï¿½ï¿½Èªï¿½ï¿½ï¿½ï¿½Ðªï¿½ë¡£', '1', '11/12/30', '1');
 
 update nbp_board set ndifficulty = ndifficulty + 1;
 
@@ -41,13 +41,13 @@ START WITH 1
 INCREMENT BY 1;
 
 create table nbp_user_board (
-uid number(6) primary key,      -- °Ô½Ã¹° ½Äº°ÀÚ
-uname varchar2(20) not null,    -- ÀÛ¼ºÀÚ ÀÌ¸§
-utitle varchar2(100) not null,  -- °Ô½Ã¹° Á¦¸ñ
-ucontent varchar2(500),         -- °Ô½Ã¹° ³»¿ë
-udate date default sysdate,     -- °Ô½Ã¹° ÀÛ¼º ÀÏÀÚ
-uhit number(4) default 0,       -- Á¶È¸¼ö
-uselector number(1) not null --1:°øÁö 2:ÀÏ¹Ý °Ô½ÃÆÇ
+uid number(6) primary key,      -- ï¿½Ô½Ã¹ï¿½ ï¿½Äºï¿½ï¿½ï¿½
+uname varchar2(20) not null,    -- ï¿½Û¼ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
+utitle varchar2(100) not null,  -- ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½ï¿½ï¿½
+ucontent varchar2(500),         -- ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½ï¿½ï¿½
+udate date default sysdate,     -- ï¿½Ô½Ã¹ï¿½ ï¿½Û¼ï¿½ ï¿½ï¿½ï¿½ï¿½
+uhit number(4) default 0,       -- ï¿½ï¿½È¸ï¿½ï¿½
+uselector number(1) not null --1:ï¿½ï¿½ï¿½ï¿½ 2:ï¿½Ï¹ï¿½ ï¿½Ô½ï¿½ï¿½ï¿½
 );
 
 CREATE SEQUENCE nbp_user_board_seq
@@ -58,8 +58,8 @@ create table nbp_users(
    username varchar2(50) not null primary key,
    password varchar2(100) not null,
    enabled char(1) DEFAULT '1',
-    nname VARCHAR2(50) NOT NULL,        -- È¸¿ø ÀÌ¸§
-    ngrade NUMBER(1)                   -- È¸¿ø µî±Þ
+    nname VARCHAR2(50) NOT NULL,        -- È¸ï¿½ï¿½ ï¿½Ì¸ï¿½
+    ngrade NUMBER(1)                   -- È¸ï¿½ï¿½ ï¿½ï¿½ï¿½
 );
 
 drop table nbp_users;
