@@ -1,13 +1,13 @@
 select * from nbp_board;
 
 create table nbp_board (
-nkid number(6) primary key,   -- �Խù� �ĺ���
-nkanji varchar2(100) not null,  -- ���� title
-nruby varchar2(500),  -- ��̰���
-nsetsumei varchar2(500),  -- ����
-ndifficulty number(5) default 0, -- ���̵�
-ndate date default sysdate, -- �߰���
-nselector number(1) not null -- ���� 한글
+nkid number(6) primary key,   -- 게시물 식별자
+nkanji varchar2(100) not null,  -- 한자 title
+nruby varchar2(500),  -- 요미가나
+nsetsumei varchar2(500),  -- 설명
+ndifficulty number(5) default 0, -- 난이도
+ndate date default sysdate, -- 추가일
+nselector number(1) not null -- 종류
 );
 
 select * from nbp_save;
@@ -32,8 +32,7 @@ commit;
 
 rollback;
 
-INSERT INTO nbp_board VALUES('1','�ի���','�ժê�','�ի��Ȫϡ�����?9����ȪǪ��롣�����?��F�������18.9984���ϫ���ΪҪȪġ� �ު�������Ȫ�??�Ǫ���ի������⡢�����ܪ˫ի��Ȫ����Ъ�롣', '1', '11/12/30', '1');
-
+INSERT INTO nbp_board VALUES('1','フッ素','ふっそ','フッ素は、原子番?9の元素である。元素記?はF。原子量は18.9984。ハロゲンのひとつ。 また、同元素の??であるフッ素分子も、一般的にフッ素と呼ばれる。', '1', '11/12/30', '1');
 update nbp_board set ndifficulty = ndifficulty + 1;
 
 CREATE SEQUENCE nbp_board_seq
@@ -41,13 +40,13 @@ START WITH 1
 INCREMENT BY 1;
 
 create table nbp_user_board (
-uid number(6) primary key,      -- �Խù� �ĺ���
-uname varchar2(20) not null,    -- �ۼ��� �̸�
-utitle varchar2(100) not null,  -- �Խù� ����
-ucontent varchar2(500),         -- �Խù� ����
-udate date default sysdate,     -- �Խù� �ۼ� ����
-uhit number(4) default 0,       -- ��ȸ��
-uselector number(1) not null --1:���� 2:�Ϲ� �Խ���
+uid number(6) primary key,      -- 게시물 식별자
+uname varchar2(20) not null,    -- 작성자 이름
+utitle varchar2(100) not null,  -- 게시물 제목
+ucontent varchar2(500),         -- 게시물 내용
+udate date default sysdate,     -- 게시물 작성 일자
+uhit number(4) default 0,       -- 조회수
+uselector number(1) not null --1:공지 2:일반 게시판
 );
 
 CREATE SEQUENCE nbp_user_board_seq
@@ -58,8 +57,8 @@ create table nbp_users(
    username varchar2(50) not null primary key,
    password varchar2(100) not null,
    enabled char(1) DEFAULT '1',
-    nname VARCHAR2(50) NOT NULL,        -- ȸ�� �̸�
-    ngrade NUMBER(1)                   -- ȸ�� ���
+    nname VARCHAR2(50) NOT NULL,        -- 회원 이름
+    ngrade NUMBER(1)                   -- 회원 등급
 );
 
 drop table nbp_users;
