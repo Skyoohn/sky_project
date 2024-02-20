@@ -90,3 +90,4 @@ select * from nbp_authorities;
 
 commit;
 
+ALTER USER scott PROFILE DEFAULT PASSWORD_LIFE_TIME UNLIMITED;
